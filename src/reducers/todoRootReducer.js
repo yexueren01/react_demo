@@ -19,11 +19,14 @@ function visibilityFilter(state = SHOW_ALL, action) {
 }
 
 function todos(state = [], action) {
+
+   const index= state.length;
     switch (action.type) {
         case ADD_TODO:
             return [
                 ...state,
                 {
+                    id:index,
                     text: action.text,
                     completed: false
                 }

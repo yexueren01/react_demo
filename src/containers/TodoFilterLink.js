@@ -12,7 +12,7 @@ import {
 import Link from '../component/Link'
 
 const mapStateToProps = (state, ownProps) => {
-     debugger;
+
     return {
         active: ownProps.filter === state.visibilityFilter
     }

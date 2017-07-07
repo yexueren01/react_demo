@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Provider } from 'react-redux'
-import { Router, Route, browserHistory } from 'react-router'
-import App from './App'
+import {Provider } from 'react-redux'
+import {createStore } from 'redux'
+import  myTodoApp from '../reducers/myTodoRootReducer'
+import  MyTodoApp from './MyTodoApp'
+import  TodoApp from './TodoApp'
 
-const Root = ({ store }) => (
-    <Provider store={store}>
-        <Router history={browserHistory}>
-            <Route path="/(:filter)" component={App} />
-        </Router>
-    </Provider>
-)
+let store = createStore(myTodoApp)
+const Root = ({ store }) => {
+    return (
+        <Provider store={store}>
+            <MyTodoApp/>
+        </Provider>
+    )
+}
 
 Root.propTypes = {
     store: PropTypes.object.isRequired

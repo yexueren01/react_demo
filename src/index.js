@@ -2,16 +2,13 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import todoApp from './reducers/todoRootReducer'
-import TodoApp from './component/TodoApp'
+import myTodoApp from './reducers/myTodoRootReducer'
 
-import { Router, Route, browserHistory } from 'react-router';
-let store = createStore(todoApp)
+import Root from './component/Root'
+
+let store = createStore(myTodoApp)
 
 render(
-    <Provider store={store}>
-        <TodoApp />
-     </Provider>
-,
+    <Root store={store} />,
     document.getElementById('root')
 )

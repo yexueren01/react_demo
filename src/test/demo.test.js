@@ -1,7 +1,7 @@
 'use strict';
 // let add = require('./add.js');
 const expect = require('chai').expect;
-// const assert = require('assert');
+ const assert = require('assert');
 
 const foo = { bar: 'baz' };
 

@@ -11,6 +11,8 @@
     "redux": "^1.0.0-rc"
   },
   "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
     "react-scripts": "1.0.7",
     "redux-devtools": "^3.4.0"
   },

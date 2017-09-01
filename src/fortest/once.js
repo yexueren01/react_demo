@@ -1,4 +1,4 @@
-function once(fn) {
+export function once(fn) {
     var returnValue, called = false;
     return function () {
         if (!called) {
